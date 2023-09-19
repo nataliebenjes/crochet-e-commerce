@@ -1,4 +1,8 @@
 import { createTheme } from '@mui/material/styles';
+
+//https://mui.com/material-ui/customization/typography/
+
+//rem font sizes
 export const shades = {
   primary: {
     100: "#fdefe8",
