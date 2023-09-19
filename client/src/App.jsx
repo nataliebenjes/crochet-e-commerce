@@ -6,6 +6,7 @@ import {
   useLocation
 } from 'react-router-dom';
 import Home from "./scenes/home/Home";
+import React from 'react';
 
 //so when you go to another page, you go to the top of the page
 const ScrollToTop = () => {
