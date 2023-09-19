@@ -48,5 +48,26 @@ export const theme = createTheme({
       main: shades.info[500],
       light: shades.info[100]
     }
-  }
-})
+  },
+  typography: {
+    fontFamily: ["Lobster", "sans-serif"].join(','),
+    fontSize: 11,
+    h1: {
+      fontFamily: ["Dosis", "sans-serif"].join(','),
+    fontSize: 48,
+    },
+    h2: {
+      fontFamily: ["Dosis", "sans-serif"].join(','),
+    fontSize: 36,
+    },
+    h3: {
+      fontFamily: ["Dosis", "sans-serif"].join(','),
+    fontSize: 20,
+    },
+    h4: {
+      fontFamily: ["Dosis", "sans-serif"].join(','),
+    fontSize: 14,
+    },
+}
+}
+)
