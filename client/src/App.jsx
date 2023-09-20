@@ -9,6 +9,8 @@ import Home from "./scenes/home/Home";
 import React from 'react';
 import ItemDetails from './scenes/itemDetails/ItemDetails';
 import Checkout from './scenes/checkout/Checkout';
+import Confirmation from './scenes/checkout/Confirmation';
+import Navbar from './scenes/global/Navbar';
 
 //so when you go to another page, you go to the top of the page
 const ScrollToTop = () => {
@@ -24,11 +26,13 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
+      <Navbar />
       <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="item/:itemId" element={<ItemDetails />} />
           <Route path="checkout" element={<Checkout />} />
+          <Route path="checkout/success" element={<Confirmation />} />
         </Routes>
       </BrowserRouter>
 
