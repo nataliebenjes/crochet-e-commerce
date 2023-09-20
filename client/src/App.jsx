@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 import Home from "./scenes/home/Home";
 import React from 'react';
+import ItemDetails from './scenes/itemDetails/ItemDetails';
+import Checkout from './scenes/checkout/Checkout';
 
 //so when you go to another page, you go to the top of the page
 const ScrollToTop = () => {
@@ -25,6 +27,8 @@ function App() {
       <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="item/:itemId" element={<ItemDetails />} />
+          <Route path="checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
 
