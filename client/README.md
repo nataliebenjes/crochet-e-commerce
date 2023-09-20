@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+why use box component? material UI lets you pass in CSS
+  -packages all style functions that are exposed in @mui/system
+  -system properties are available via the sx prop
+  -cleaner in line and in component styling
+  
