@@ -11,7 +11,7 @@ export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    //any time we have setItems, we can change the items to whatever we pass into the payload
+    //any time we have setItems, we can change the items to whatever we pass into payload
     setItems: (state, action) => {
       state.items = action.payload;
     }
