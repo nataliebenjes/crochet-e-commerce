@@ -45,7 +45,7 @@ export const theme = createTheme({
       main: shades.primary[500]
     },
     secondary: {
-      main: shades.blue[500]
+      main: shades.secondary[500]
     },
     info: {
       dark: shades.info[700],

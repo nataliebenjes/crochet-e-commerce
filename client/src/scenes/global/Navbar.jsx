@@ -34,7 +34,36 @@ const Navbar = () => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        ></Box>
+        >
+          <Box
+          
+          onClick={() => navigate("/")}
+          sx={{ '&:hover': { cursor: "pointer" }}}
+          color={shades.secondary[500]}
+          >
+            Crochet!!!
+          </Box>
+          {/* //icons */}
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            columnGap="20px"
+            zIndex="2"
+            >
+              <IconButton sx={{ color: "purple"}}>
+                <SearchOutlined />
+              </IconButton>
+              <IconButton sx={{ color: "purple"}}>
+                <PersonOutline />
+              </IconButton>
+              <IconButton sx={{ color: "purple"}}>
+                <ShoppingBagOutlined />
+              </IconButton>
+              <IconButton sx={{ color: "purple"}}>
+                <MenuOutlined />
+              </IconButton>
+            </Box>
+        </Box>
     </Box>
 
   );
