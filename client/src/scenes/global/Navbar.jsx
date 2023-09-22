@@ -9,10 +9,12 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { shades } from "../../theme";
 import React from 'react';
+import { setIsCartOpen } from '../../state';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.cart);
 
   return (
     
@@ -56,9 +58,15 @@ const Navbar = () => {
               <IconButton sx={{ color: "purple"}}>
                 <PersonOutline />
               </IconButton>
-              <IconButton sx={{ color: "purple"}}>
+              <Badge>
+              <IconButton
+              onClick={() => dispatch(setIsCartOpen({}))} 
+              sx={{ color: "purple"}}
+              >
+                
                 <ShoppingBagOutlined />
               </IconButton>
+              </Badge>
               <IconButton sx={{ color: "purple"}}>
                 <MenuOutlined />
               </IconButton>
