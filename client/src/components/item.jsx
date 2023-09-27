@@ -8,7 +8,6 @@ import { addToCart } from "../state";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 
-
 const Item = ({ item, width}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -51,6 +50,7 @@ const {
           alignItems="center"
           borderRadius="3px" 
           >
+            {/* //make sure the count doesn't go below 1 */}
               <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
                 <RemoveIcon />
               </IconButton>
@@ -59,6 +59,7 @@ const {
                 <AddIcon />
               </IconButton>
             </Box>
+            {/* Button */}
             <Button
               onClick={() => {
                 dispatch(addToCart({ item: { ...item, count } }));
