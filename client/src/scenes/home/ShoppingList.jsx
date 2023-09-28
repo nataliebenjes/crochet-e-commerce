@@ -16,7 +16,7 @@ const ShoppingList = () => {
   const breakPoint = useMediaQuery("(min-width:600px)");
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setValue(newValue); //updates the value in the component's state. newValue of selected tab
   };
 
   async function getItems() {
@@ -57,12 +57,15 @@ console.log(items);
       <Typography variant="h3" textAlign="center">
         Our Featured <b>Products</b>
       </Typography>
+      {/* used for filter function */}
       <Tabs
         textColor="primary"
         indicatorColor="primary"
         value={value}
+        //responds to tab selection changes
         onChange={handleChange}
         centered
+        //visible in non-mobile device
         TabIndicatorProps={{ sx: { display: breakPoint ? "block" : "none" } }}
         sx={{
           m: "25px",
@@ -76,6 +79,7 @@ console.log(items);
         <Tab label="HATS" value="hats" />
         <Tab label="miscellaneous" value="miscellaneous" />
       </Tabs>
+      {/* makes box responsive */}
       <Box
         margin="0 auto"
         display="grid"

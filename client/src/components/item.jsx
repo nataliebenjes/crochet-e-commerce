@@ -16,17 +16,20 @@ const Item = ({ item, width}) => {
   const [isHovered, setIsHovered] = useState(false);
   const { palette: { secondary },
 } = useTheme();
+//destructuring assignment to extract properties from `item`
 const { category, price, name, image } = item.attributes;
 const {
   data: {
     attributes: {
       formats: {
         medium: { url },
-      }
-    }
-  }
+      },
+    },
+  },
 } = image;
   return (
+    console.log('URL:', url),
+    console.log('Medium URL:', item.attributes.formats),
     <Box width={width}>
       <Box position="relative" onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
         <img
@@ -34,11 +37,13 @@ const {
           width="300px"
           height="400px"
           src={`http://localhost:1337/${url}`}
+
+          // src={`https://plus.unsplash.com/premium_photo-1661741379133-9206bca144dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3dlYXRlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1400&q=60`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: 'pointer'}}
           />
     <Box
-      display={isHovered ? "blocked" : "none"}
+      display={isHovered ? "block" : "none"}
       position="absolute"
       bottom="10%"
       left="0"
