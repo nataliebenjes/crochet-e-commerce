@@ -6,6 +6,7 @@ import Item from "../../components/item";
 import { Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useDispatch, useSelector } from "react-redux";
+
 import { setItems } from "../../state";
 
 const ShoppingList = () => {
@@ -19,6 +20,16 @@ const ShoppingList = () => {
   };
 
   async function getItems() {
+    try {
+      const response = await fetch("http://localhost:1337/api/items?populate=image", { method: "GET" });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const itemsJson = await response.json();
+      dispatch(setItems(itemsJson.data));
+    } catch (error) {
+      console.error('Error fetching items:', error);
+    }
     const items = await fetch(
       "http://localhost:1337/api/items?populate=image",
       { method: "GET" }
@@ -30,7 +41,7 @@ const ShoppingList = () => {
   useEffect(() => {
     getItems();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
+console.log(items);
   const hatsItems = items.filter(
     (item) => item.attributes.category === "hats"
   );
@@ -75,19 +86,19 @@ const ShoppingList = () => {
       >
         {value === "all" &&
           items.map((item) => (
-            <Item item={item} key={`${item.name}-${item.id}`} />
+            <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
           ))}
         {value === "tops" &&
           topsItems.map((item) => (
-            <Item item={item} key={`${item.name}-${item.id}`} />
+            <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
           ))}
         {value === "miscellaneous" &&
           miscellaneousItems.map((item) => (
-            <Item item={item} key={`${item.name}-${item.id}`} />
+            <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
           ))}
         {value === "hats" &&
           hatsItems.map((item) => (
-            <Item item={item} key={`${item.name}-${item.id}`} />
+            <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
           ))}
       </Box>
     </Box>
