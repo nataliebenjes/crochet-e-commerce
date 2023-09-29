@@ -86,7 +86,6 @@ const {
         <Typography fontWeight="bold">${price}</Typography>
           </Box>
         </Box>
-
   )
 }
 
