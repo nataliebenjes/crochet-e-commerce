@@ -15,6 +15,11 @@ import Item from "../../components/item.jsx"
 
 const ItemDetails = () => {
   return <div>Item Details</div>;
+  const dispatch = useDispatch();
+  const { itemId } = useParams();
+  //create value variable and corresponding setValue function. initial value of `value` is description.
+  const [value, setValue] = useState("description");
+
 };
 
 export default ItemDetails;
