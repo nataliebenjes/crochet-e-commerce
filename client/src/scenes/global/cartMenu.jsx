@@ -68,7 +68,7 @@ const CartMenu = () => {
                       width="123px"
                       height="164px"
                       //strapi url
-                      src={`http://localhost:1337/${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                      src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                   />
                   </Box>
                   <Box flex="1 1 60%">
@@ -88,7 +88,7 @@ const CartMenu = () => {
                       <Box
                         display="flex"
                         alignItems="center"
-                        border={`1.5px solid ${shades.neutral[500]}`}
+                        border={`1.5px solid ${shades.secondary[500]}`}
                       >
                         <IconButton
                           onClick={() =>
