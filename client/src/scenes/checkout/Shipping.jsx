@@ -19,7 +19,7 @@ const Shipping = ({
         </Typography>
         <AddressForm
           type="billingAddress"
-          value={values.billingAddress}
+          values={values.billingAddress}
           errors={errors}
           //when hovering over
           touched={touched}
