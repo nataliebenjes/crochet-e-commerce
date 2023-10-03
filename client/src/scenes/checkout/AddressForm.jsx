@@ -11,6 +11,7 @@ const AddressForm = ({
   handleChange,
 }) => {
   const isNonMobile = useMediaQuery("(min-width:600px");
+  console.log(values);
 
   //for code readability
   const formattedName = (field) => `${type}.${field}}`;
@@ -55,7 +56,7 @@ const AddressForm = ({
         label="Last Name"
         onBlur={handleBlur}
         onChange={handleChange}
-        value={values.firstName}
+        value={values.lastName}
         name={formattedName("lastName")}
         error={formattedError("lastName")}
         helperText={formattedHelper("lastName")}
