@@ -4,7 +4,7 @@ import { Formik } from "formik";
 import { useState } from "react";
 import * as yup from "yup";
 import { shades } from "../../theme";
-// import Payment from "./Payment";
+import Payment from "./Payment";
 import Shipping from "./Shipping";
 // import { loadStripe } from "@stripe/stripe-js";
 import React from "react";
@@ -96,6 +96,21 @@ const Checkout = () => {
   const isSecondStep = activeStep === 1;
   const handleFormSubmit = async (values, actions) => {
     setActiveStep(activeStep + 1);
+// Copies billing to shipping
+if (isFirstStep && values.shippingAddress.isSameAddress) {
+  actions.setFieldValue("shippingAddress", {
+    ...values.billingAddress,
+    isSameAddress: true,
+  });
+}
+//for payment::::
+
+// if (isSecondStep) {
+//   makePayment(values);
+// }
+  //reset validation everytime you go to second step
+// actions.setTouched({});
+// };
   }
 
   return <Box width="80%" m="100px">
@@ -113,31 +128,73 @@ const Checkout = () => {
           initialValues={initialValues}
           validationSchema={checkoutSchema[activeStep]}
         >
-            {({
-              values,
-              errors,
-              touched,
-              handleBlur,
-              handleChange,
-              handleSubmit,
-              setFieldValue
-            }) => (
-                <form onSubmit={handleSubmit}>
-                  {isFirstStep && (
-                  <Shipping
-                    values={values}
-                    errors={errors}
-                    touched={touched}
-                    handleBlur={handleBlur}
-                    handleChange={handleChange}
-                    setFieldValue={setFieldValue}
-                  />
-
-                  )} 
-                </form>
-            )}
-            
-      </Formik>
+          {({
+            values,
+            errors,
+            touched,
+            handleBlur,
+            handleChange,
+            handleSubmit,
+            setFieldValue,
+          }) => (
+            <form onSubmit={handleSubmit}>
+              {isFirstStep && (
+                <Shipping
+                  values={values}
+                  errors={errors}
+                  touched={touched}
+                  handleBlur={handleBlur}
+                  handleChange={handleChange}
+                  setFieldValue={setFieldValue}
+                />
+              )}
+              {isSecondStep && (
+                <Payment
+                  values={values}
+                  errors={errors}
+                  touched={touched}
+                  handleBlur={handleBlur}
+                  handleChange={handleChange}
+                  setFieldValue={setFieldValue}
+                />
+              )}
+              <Box display="flex" justifyContent="space-between" gap="50px">
+                {!isFirstStep && (
+                  <Button
+                    fullWidth
+                    color="primary"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: shades.primary[200],
+                      boxShadow: "none",
+                      color: "white",
+                      borderRadius: 0,
+                      padding: "15px 40px",
+                    }}
+                    onClick={() => setActiveStep(activeStep - 1)}
+                  >
+                    Back
+                  </Button>
+                )}
+                <Button
+                  fullWidth
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  sx={{
+                    backgroundColor: shades.primary[400],
+                    boxShadow: "none",
+                    color: "white",
+                    borderRadius: 0,
+                    padding: "15px 40px",
+                  }}
+                >
+                  {!isSecondStep ? "Next" : "Place Order"}
+                </Button>
+              </Box>
+            </form>
+          )}
+        </Formik>
     </Box>
   </Box>
 }
