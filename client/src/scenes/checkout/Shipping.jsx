@@ -4,31 +4,29 @@ import React from "react";
 
 const Shipping = ({
   values,
-  errors,
   touched,
-  handleBlur,
+  errors,
   handleChange,
+  handleBlur,
   setFieldValue,
 }) => {
-
-  return(
+  return (
     <Box m="30px auto">
-      {/* billing form */}
+      {/* BILLING FORM */}
       <Box>
-        <Typography sx={{ mb: "15px"}} fontSize="18px">
+        <Typography sx={{ mb: "15px" }} fontSize="18px">
           Billing Information
         </Typography>
         <AddressForm
           type="billingAddress"
           values={values.billingAddress}
-          errors={errors}
-          //when hovering over
           touched={touched}
-          //when you click
+          errors={errors}
           handleBlur={handleBlur}
           handleChange={handleChange}
         />
       </Box>
+
       <Box mb="20px">
         <FormControlLabel
           control={
@@ -47,28 +45,24 @@ const Shipping = ({
         />
       </Box>
 
-      {/* shipping form */}
+      {/* SHIPPING FORM */}
       {!values.shippingAddress.isSameAddress && (
         <Box>
           <Typography sx={{ mb: "15px" }} fontSize="18px">
             Shipping Information
           </Typography>
           <AddressForm
-          type="shippingAddress"
-          values={values.billingAddress}
-          errors={errors}
-          //when hovering over
-          touched={touched}
-          //when you click
-          handleBlur={handleBlur}
-          handleChange={handleChange}
-        />
-          </Box>
+            type="shippingAddress"
+            values={values.shippingAddress}
+            touched={touched}
+            errors={errors}
+            handleBlur={handleBlur}
+            handleChange={handleChange}
+          />
+        </Box>
       )}
     </Box>
-  )
-}
-
-
+  );
+};
 
 export default Shipping;
