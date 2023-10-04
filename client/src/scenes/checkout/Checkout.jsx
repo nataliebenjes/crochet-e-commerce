@@ -19,6 +19,7 @@ const Checkout = () => {
   const isSecondStep = activeStep === 1;
 
   const handleFormSubmit = async (values, actions) => {
+      console.log("Active Step:", activeStep);
     setActiveStep(activeStep + 1);
 
     if (isFirstStep && values.shippingAddress.isSameAddress) {
@@ -36,6 +37,8 @@ const Checkout = () => {
   };
 
   async function makePayment(values) {
+    console.log("Making Payment");
+    
     const stripe = await stripePromise;
     const requestBody = {
       userName: [values.firstName, values.lastName].join(" "),
@@ -51,10 +54,16 @@ const Checkout = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
     });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
     const session = await response.json();
+    // console.log('lineItems:', lineItems);
     await stripe.redirectToCheckout({
       sessionId: session.id,
     });
+
   }
 
   return (

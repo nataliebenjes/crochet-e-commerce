@@ -14,7 +14,7 @@ const AddressForm = ({
   console.log(values);
 
   // for code readability
-  const formattedName = (field) => `${type}.${field}}`;
+  const formattedName = (field) => `${type}.${field}`;
   
   const formattedError = (field) =>
     Boolean(
@@ -44,7 +44,7 @@ const AddressForm = ({
         label="First Name"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.firstName}
+        value={values.firstName}
         name={formattedName("firstName")}
         error={formattedError("firstName")}
         helperText={formattedHelper("firstName")}
@@ -57,7 +57,7 @@ const AddressForm = ({
         label="Last Name"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.lastName}
+        value={values.lastName}
         name={formattedName("lastName")}
         error={formattedError("lastName")}
         helperText={formattedHelper("lastName")}
@@ -69,7 +69,7 @@ const AddressForm = ({
         label="Country"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.country}
+        value={values.country}
         name={formattedName("country")}
         error={formattedError("country")}
         helperText={formattedHelper("country")}
@@ -81,7 +81,7 @@ const AddressForm = ({
         label="Street Address"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.street1}
+        value={values.street1}
         name={formattedName("street1")}
         error={formattedError("street1")}
         helperText={formattedHelper("street1")}
@@ -93,7 +93,7 @@ const AddressForm = ({
         label="Street Address 2 (optional)"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.street2}
+        value={values.street2}
         name={formattedName("street2")}
         error={formattedError("street2")}
         helperText={formattedHelper("street2")}
@@ -105,7 +105,7 @@ const AddressForm = ({
         label="City"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.city}
+        value={values.city}
         name={formattedName("city")}
         error={formattedError("city")}
         helperText={formattedHelper("city")}
@@ -117,7 +117,7 @@ const AddressForm = ({
         label="State"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.state}
+        value={values.state}
         name={formattedName("state")}
         error={formattedError("state")}
         helperText={formattedHelper("state")}
@@ -129,7 +129,7 @@ const AddressForm = ({
         label="Zip Code"
         onBlur={handleBlur}
         onChange={handleChange}
-        // value={values.zipCode}
+        value={values.zipCode}
         name={formattedName("zipCode")}
         error={formattedError("zipCode")}
         helperText={formattedHelper("zipCode")}

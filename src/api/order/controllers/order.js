@@ -5,10 +5,13 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
+//Node.js: expose variables, objects, or functions from a module
 
+//destructuring strapi
 module.exports = createCoreController('api::order.order', ({ strapi }) => ({
   //access to strapi API. allows up to modify strapi endpoint
   async create(ctx) {
+    //what we are getting from front end
       const { products, userName, email } = ctx.request.body;
 
       try {
