@@ -1,5 +1,4 @@
-import { Box, Typography } from "@mui/material";
-import TextField from "@mui/material/TextField";
+import { Box, Typography, TextField } from "@mui/material";
 import React from "react";
 
 const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
@@ -18,6 +17,7 @@ const Payment = ({ values, touched, errors, handleBlur, handleChange }) => {
           onChange={handleChange}
           value={values.email}
           name="email"
+          //converts into a boolean
           error={!!touched.email && !!errors.email}
           helperText={touched.email && errors.email}
           sx={{ gridColumn: "span 4", marginBottom: "15px" }}
