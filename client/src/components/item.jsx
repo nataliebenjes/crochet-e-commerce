@@ -28,8 +28,7 @@ const {
   },
 } = image;
   return (
-    console.log('URL:', url),
-    console.log('Medium URL:', image),
+    console.log('item', item),
     <Box width={width}>
       <Box position="relative" onMouseOver={() => setIsHovered(true)} onMouseOut={() => setIsHovered(false)}>
         <img

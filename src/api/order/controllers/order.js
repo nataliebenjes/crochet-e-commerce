@@ -40,8 +40,8 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
               payment_method_types: ["card"],
               customer_email: email,
               mode: "payment",
-              success_url: "http://localhost:1337/checkout/success",
-              cancel_url: "http://localhost:1337",
+              success_url: "http://localhost:3000/checkout/success",
+              cancel_url: "http://localhost:3000",
               line_items: lineItems,
             });
       // create the item in backend
