@@ -68,7 +68,13 @@ console.log("Price", Price);
               onClick={() => {
                 dispatch(addToCart({ item: { ...item, count } }));
               }}
-              sx={{ backgroundColor: shades.red[600], color: "brown" }}
+              style={{
+                backgroundColor: orange.main,
+                color: orange.light,
+                transition: 'opacity 0.3s',
+              }}
+              onMouseOver={(e) => { e.target.style.opacity = 0.7; }}
+              onMouseOut={(e) => { e.target.style.opacity = 0.9; }}
             >
               Add to Cart
             </Button>

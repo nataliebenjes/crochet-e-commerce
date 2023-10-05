@@ -12,3 +12,7 @@ body {
 .app {
   margin: auto;
 }
+
+.blurred-image {
+  filter: blur(5px); 
+}

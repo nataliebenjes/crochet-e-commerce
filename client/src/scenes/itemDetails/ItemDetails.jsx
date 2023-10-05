@@ -84,7 +84,7 @@ console.log(item);
             <Box
               display="flex"
               alignItems="center"
-              border={`1.5px solid ${shades.secondary[300]}`}
+              border={`1.5px solid ${shades.orange[300]}`}
               mr="20px"
               p="2px 5px"
               >
