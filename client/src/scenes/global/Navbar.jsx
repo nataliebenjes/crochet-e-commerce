@@ -37,6 +37,7 @@ function Navbar() {
       top="0"
       left="0"
       zIndex="1"
+      backgroundColor="rgba(255, 255, 255, 0.5)"
     >
       <Box
         width="80%"
@@ -47,11 +48,15 @@ function Navbar() {
       >
         <Box
           onClick={() => navigate("/")}
-          sx={{ "&:hover": { cursor: "pointer" } }}
-          color={shades.teal[500]}
+          sx={{
+            "&:hover": { cursor: "pointer" },
+            color: shades.orange[700],
+            fontSize: "27px" 
+          }}
         >
-          Crochet!!
+          Crochet? No Way!
         </Box>
+
         <Box
           display="flex"
           justifyContent="space-between"

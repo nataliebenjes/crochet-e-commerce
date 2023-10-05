@@ -69,24 +69,23 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Lobster", "sans-serif"].join(','),
-    fontSize: 11,
+    fontFamily: ["Alegreya", "serif"].join(','),
+    fontSize: 18,
     h1: {
-      fontFamily: ["Dosis", "sans-serif"].join(','),
-    fontSize: 48,
+      fontFamily: ["Amatic SC", "cursive"].join(','),
+      fontSize: 45,
     },
     h2: {
-      fontFamily: ["Dosis", "sans-serif"].join(','),
-    fontSize: 36,
+      fontFamily: ["Amatic SC", "cursive"].join(','),
+      fontSize: 36,
     },
     h3: {
-      fontFamily: ["Dosis", "sans-serif"].join(','),
-    fontSize: 20,
+      fontFamily: ["Amatic SC", "cursive"].join(','),
+      fontSize: 20,
     },
     h4: {
-      fontFamily: ["Dosis", "sans-serif"].join(','),
-    fontSize: 14,
+      fontFamily: ["Amatic SC", "cursive"].join(','),
+      fontSize: 14,
     },
-}
-}
-)
+  }
+});

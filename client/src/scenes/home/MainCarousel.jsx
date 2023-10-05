@@ -5,6 +5,8 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { shades } from "../../theme";
 import React from "react";
+import { useTheme } from '@mui/material/styles'; 
+
 
 //imports all assets from folder
 const importAll = (r) =>
@@ -83,8 +85,12 @@ const MainCarousel = () => {
               right={isNonMobile ? undefined : "0"}
               margin={isNonMobile ? undefined : "0 auto"}
               maxWidth={isNonMobile ? undefined : "240px"}
+              backgroundColor={shades.orange[700] + "80"} // "80" represents 50% opacity
+
+
+
           >
-            <Typography color={shades.orange[200]}>-- NEW ITEMS</Typography>
+            <Typography color={shades.orange[200]}>NEW ITEMS</Typography>
             <Typography variant="h1">Summer Sale</Typography>
             <Typography
               fontWeight="bold"
