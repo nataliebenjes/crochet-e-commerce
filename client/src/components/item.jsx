@@ -14,7 +14,7 @@ const Item = ({ item, width}) => {
   //represent number of items that we're going to add to the cart
   const [count, setCount] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
-  const { palette: { secondary },
+  const { palette: { orange },
 } = useTheme();
 //destructuring assignment to extract properties from `item`
 const { category, Price, name, image, shortDescription } = item.attributes;
@@ -58,7 +58,7 @@ console.log("Price", Price);
               <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
                 <RemoveIcon />
               </IconButton>
-              <Typography color={shades.primary[300]}>{count}</Typography>
+              <Typography color={shades.red[300]}>{count}</Typography>
               <IconButton onClick={() => setCount(count + 1)}>
                 <AddIcon />
               </IconButton>
@@ -68,7 +68,7 @@ console.log("Price", Price);
               onClick={() => {
                 dispatch(addToCart({ item: { ...item, count } }));
               }}
-              sx={{ backgroundColor: shades.primary[600], color: "brown" }}
+              sx={{ backgroundColor: shades.red[600], color: "brown" }}
             >
               Add to Cart
             </Button>
@@ -76,7 +76,7 @@ console.log("Price", Price);
         </Box>
       </Box>
       <Box mt="3px">
-        <Typography variant="subtitle2" color={secondary.dark}>
+        <Typography variant="subtitle2" color={orange.dark}>
           {category
             .replace(/[A-Z]/g, " $1")
             .replace(/^./, (str) => str.toUpperCase())}

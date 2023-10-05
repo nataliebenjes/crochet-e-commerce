@@ -6,7 +6,7 @@ import React from "react";
 
 const Footer = () => {
   const {
-    palette: { neutral },
+    palette: { yellow },
   } = useTheme();
   return (
   <Box mt="70px" p="40px 0">
@@ -25,7 +25,7 @@ const Footer = () => {
           variant="h4"
           fontWeight="bold"
           mb="30px"
-          color={shades.secondary[500]}
+          color={shades.red[500]}
           >Crochet store</Typography>
           <div>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores temporibus consectetur, ea impedit exercitationem laborum odit harum, totam molestias, voluptate illo quod molestiae dolores. Eveniet voluptas blanditiis eum asperiores quasi!

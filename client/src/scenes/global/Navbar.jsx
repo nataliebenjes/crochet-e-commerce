@@ -48,7 +48,7 @@ function Navbar() {
         <Box
           onClick={() => navigate("/")}
           sx={{ "&:hover": { cursor: "pointer" } }}
-          color={shades.secondary[500]}
+          color={shades.teal[500]}
         >
           Crochet!!
         </Box>

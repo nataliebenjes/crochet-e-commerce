@@ -2,56 +2,71 @@ import { createTheme } from '@mui/material/styles';
 
 //https://mui.com/material-ui/customization/typography/
 
-//rem font sizes
+//rem font sizes gen shades: macOS: cmd+k cmd+g
 export const shades = {
-  primary: {
-    100: "#fdefe8",
-    200: "#fcdfd1",
-    300: "#facfbb",
-    400: "#f9bfa4",
-    500: "#f7af8d",
-    600: "#c68c71",
-    700: "#946955",
-    800: "#634638",
-    900: "#31231c"
+  red: {
+    100: "#f6dcd7",
+    200: "#edb8af",
+    300: "#e59586",
+    400: "#dc715e",
+    500: "#d34e36",
+    600: "#a93e2b",
+    700: "#7f2f20",
+    800: "#541f16",
+    900: "#2a100b"
   },
-  secondary: {
-    100: "#d7ecf2",
-    200: "#afdae5",
-    300: "#87c7d9",
-    400: "#5fb5cc",
-    500: "#37a2bf",
-    600: "#2c8299",
-    700: "#216173",
-    800: "#16414c",
-    900: "#0b2026"
-  },
-  info: {
-    100: "#dbd9e9",
-    200: "#b8b4d3",
-    300: "#948ebd",
-    400: "#7169a7",
-    500: "#4d4391",
-    600: "#3e3674",
-    700: "#2e2857",
-    800: "#1f1b3a",
-    900: "#0f0d1d"
-  },
+  teal: {
+      100: "#f0fbfa",
+      200: "#e0f7f4",
+      300: "#d1f3ef",
+      400: "#c1efe9",
+      500: "#b2ebe4",
+      600: "#8ebcb6",
+      700: "#6b8d89",
+      800: "#475e5b",
+      900: "#242f2e"
+},
+orange: {
+  100: "#ffe9d2",
+  200: "#ffd2a5",
+  300: "#ffbc79",
+  400: "#ffa54c",
+  500: "#ff8f1f",
+  600: "#cc7219",
+  700: "#995613",
+  800: "#66390c",
+  900: "#331d06"
+},
+green: {
+  100: "#e4f9ed",
+  200: "#c9f4db",
+  300: "#aeeeca",
+  400: "#93e9b8",
+  500: "#78e3a6",
+  600: "#60b685",
+  700: "#488864",
+  800: "#305b42",
+  900: "#182d21"
 }
+}
+
 
 export const theme = createTheme({
   palette: {
-    primary: {
-      main: shades.primary[500]
+    red: {
+      main: shades.red[500]
     },
-    secondary: {
-      main: shades.secondary[500]
+    teal: {
+      main: shades.teal[500]
     },
-    info: {
-      dark: shades.info[700],
-      main: shades.info[500],
-      light: shades.info[100]
-    }
+    orange: {
+      dark: shades.orange[700],
+      main: shades.orange[500],
+      light: shades.orange[100]
+    },
+    green: {
+      main: shades.green[500]
+    },
   },
   typography: {
     fontFamily: ["Lobster", "sans-serif"].join(','),

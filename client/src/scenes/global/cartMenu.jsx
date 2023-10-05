@@ -88,7 +88,7 @@ const CartMenu = () => {
                       <Box
                         display="flex"
                         alignItems="center"
-                        border={`1.5px solid ${shades.secondary[500]}`}
+                        border={`1.5px solid ${shades.red[500]}`}
                       >
                         <IconButton
                           onClick={() =>
@@ -125,7 +125,7 @@ const CartMenu = () => {
             </FlexBox>
             <Button
               sx={{
-                backgroundColor: shades.primary[400],
+                backgroundColor: shades.teal[400],
                 color: "white",
                 borderRadius: 0,
                 minWidth: "100%",
