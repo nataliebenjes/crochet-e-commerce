@@ -27,7 +27,7 @@ const CartMenu = () => {
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
 
   const totalPrice = cart.reduce((total, item) => {
-    return total + item.count * item.attributes.price;
+    return total + item.count * item.attributes.Price;
   }, 0);
 
   return (
@@ -40,6 +40,7 @@ const CartMenu = () => {
       left="0"
       top="0"
       overflow="auto"
+      backgroundColor="rgba(255, 255, 255, 0.9)"
     >
       <Box
         position="fixed"
@@ -51,7 +52,7 @@ const CartMenu = () => {
         <Box padding="30px" overflow="auto" height="100%">
           {/* HEADER */}
           <FlexBox mb="15px">
-            <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
+            <Typography variant="h2">SHOPPING BAG ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
               <CloseIcon />
             </IconButton>
@@ -88,7 +89,7 @@ const CartMenu = () => {
                       <Box
                         display="flex"
                         alignItems="center"
-                        border={`1.5px solid ${shades.red[500]}`}
+                        border={`1.5px solid ${shades.orange[600]}`}
                       >
                         <IconButton
                           onClick={() =>
@@ -107,7 +108,7 @@ const CartMenu = () => {
                         </IconButton>
                       </Box>
                       <Typography fontWeight="bold">
-                        ${item.attributes.price}
+                        ${item.attributes.Price}
                       </Typography>
                     </FlexBox>
                   </Box>
@@ -125,7 +126,7 @@ const CartMenu = () => {
             </FlexBox>
             <Button
               sx={{
-                backgroundColor: shades.teal[400],
+                backgroundColor: shades.teal[700],
                 color: "white",
                 borderRadius: 0,
                 minWidth: "100%",

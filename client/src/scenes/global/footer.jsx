@@ -9,7 +9,8 @@ const Footer = () => {
     palette: { yellow },
   } = useTheme();
   return (
-  <Box mt="70px" p="40px 0">
+  <Box mt="30px" p="30px 0"
+  backgroundColor={shades.orange[100]} >
     <Box
       width="80%"
       margin="auto"
@@ -22,32 +23,39 @@ const Footer = () => {
         {/* 20% is lowest allowed value, 30% is preferred (if box is within 20% and 40%) 40% is as big as it can get */}
         <Box width="clamp(20%, 30%, 40%)">
           <Typography
-          variant="h4"
+          variant="h2"
           fontWeight="bold"
           mb="30px"
-          color={shades.red[500]}
-          >Crochet store</Typography>
+          color={shades.red[800]}
+          >Crochet? No Way!</Typography>
           <div>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores temporibus consectetur, ea impedit exercitationem laborum odit harum, totam molestias, voluptate illo quod molestiae dolores. Eveniet voluptas blanditiis eum asperiores quasi!
           </div>
         </Box>
         <Box>
-          <Typography variant="h4" fontWeight="bold"
-          mb="30px">
+          <Typography variant="h2" fontWeight="bold"
+          mb="30px"
+          color={shades.red[800]}
+          >
             About us:
           </Typography>
-          <Typography mb="30px">Careers</Typography>
-          <Typography mb="30px">FAQ</Typography>
-          <Typography mb="30px">Track Your Order</Typography>
-          <Typography mb="30px">Returns & Refund</Typography>
+          <Typography mb="20px">Careers</Typography>
+          <Typography mb="20px">FAQ</Typography>
+          <Typography mb="20px">Track Your Order</Typography>
+          <Typography mb="20px">Returns & Refund</Typography>
         </Box>
         <Box>
-          <Typography width="clamp(20%, 25%, 30%)">Contact Us</Typography>
+        <Typography variant="h2" fontWeight="bold"
+          mb="30px"
+          color={shades.red[800]}
+          >Contact Us</Typography>
           <Typography mb="40px">5097 Store-address-in-PDX Portland, OR</Typography>
           <Typography mb="30px">email: adventure.crochet@gmail.com</Typography>
         </Box>
         <Box>
-          <Typography width="clamp(20%, 25%, 30%)">Our Credo:</Typography>
+          <Typography 
+          variant="h2"
+          width="clamp(20%, 25%, 30%)">Our Credo:</Typography>
           <Typography mb="40px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta modi iste, eaque accusantium, placeat nesciunt quos dolor eligendi accusamus illum vero quisquam fuga obcaecati, laboriosam aliquam tempora ratione nobis amet!</Typography>
         </Box>
       </Box>
