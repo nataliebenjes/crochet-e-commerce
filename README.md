@@ -5,11 +5,34 @@ https://stripe.com/docs/checkout/quickstart
 stripe API reference
 https://stripe.com/docs/api/checkout/sessions/create
 
+
+https://stripe.com/docs/checkout/quickstart#testing
+`Try it out
+Click the checkout button to be redirected to the Stripe Checkout page. Use any of these test cards to simulate a payment.
+
+Payment succeeds
+
+4242 4242 4242 4242
+Payment requires authentication
+
+4000 0025 0000 3155
+Payment is declined
+
+4000 0000 0000 9995
+`
 run in dev mode
 `npx strapi develop`
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+
+Strapi EndPoints
+`Method	URL	Description
+GET	/api/:pluralApiId	Get a list of entries
+POST	/api/:pluralApiId	Create an entry
+GET	/api/:pluralApiId/:documentId	Get an entry
+PUT	/api/:pluralApiId/:documentId	Update an entry
+DELETE	/api/:pluralApiId/:documentId	Delete an entry`
 
 ### `develop`
 

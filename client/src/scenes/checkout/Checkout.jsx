@@ -19,7 +19,6 @@ const Checkout = () => {
   const isSecondStep = activeStep === 1;
 
   const handleFormSubmit = async (values, actions) => {
-      console.log("Active Step:", activeStep);
     setActiveStep(activeStep + 1);
 
     if (isFirstStep && values.shippingAddress.isSameAddress) {
@@ -57,7 +56,7 @@ const Checkout = () => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-
+    // console.log("lineItems", lineItems)
     const session = await response.json();
     // console.log('lineItems:', lineItems);
     await stripe.redirectToCheckout({
