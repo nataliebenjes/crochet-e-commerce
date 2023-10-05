@@ -13,6 +13,10 @@ import Confirmation from './scenes/checkout/Confirmation';
 import Navbar from './scenes/global/Navbar';
 import CartMenu from './scenes/global/cartMenu';
 import Footer from './scenes/global/footer';
+import CustomerSupport from './scenes/Dropdown/CustomerSupport';
+import Sales from './scenes/Dropdown/Sales';
+import Feedback from './scenes/Dropdown/Feedback';
+
 
 //so when you go to another page, you go to the top of the page
 const ScrollToTop = () => {
@@ -35,6 +39,11 @@ function App() {
           <Route path="item/:itemId" element={<ItemDetails />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="checkout/success" element={<Confirmation />} />
+          <Route path="/customer-Support
+          " element={<CustomerSupport
+          />} />
+          <Route path="/sales" element={<Sales />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
         <CartMenu />
         <Footer />

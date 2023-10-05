@@ -77,7 +77,7 @@ console.log(item);
           {/* //top, right, bottom left */}
           <Box m="65px 0 25px 0">
             <Typography variant="h3">{item?.attributes?.shortDescription}</Typography>
-            <Typography>${item?.attributes?.price}</Typography>
+            <Typography>${item?.attributes?.Price}</Typography>
             <Typography sx={{ mt: "20px" }}>{item?.attributes?.longDescription}</Typography>
           </Box>
           <Box display="flex" alignItems="center" minHeight="50px">

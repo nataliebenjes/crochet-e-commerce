@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Badge, Box, IconButton } from "@mui/material";
+import { Badge, Box, IconButton, Popover, MenuItem } from "@mui/material";
 import {
   PersonOutline,
   ShoppingBagOutlined,
@@ -9,12 +9,22 @@ import {
 import { useNavigate } from "react-router-dom";
 import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state";
-import React from "react";
+import React, { useState } from "react";
+import Menu from "./Menu"; 
 
 function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box
@@ -75,9 +85,27 @@ function Navbar() {
               <ShoppingBagOutlined />
             </IconButton>
           </Badge>
-          <IconButton sx={{ color: "black" }}>
+          <IconButton
+            sx={{ color: "black" }}
+            onClick={handleClick}
+          >
             <MenuOutlined />
           </IconButton>
+          <Popover
+            open={Boolean(anchorEl)}
+            anchorEl={anchorEl}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "center",
+            }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "center",
+            }}
+          >
+            <Menu />
+          </Popover>
         </Box>
       </Box>
     </Box>
@@ -85,4 +113,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
 

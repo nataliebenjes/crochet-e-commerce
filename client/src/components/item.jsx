@@ -17,7 +17,7 @@ const Item = ({ item, width}) => {
   const { palette: { secondary },
 } = useTheme();
 //destructuring assignment to extract properties from `item`
-const { category, price, name, image } = item.attributes;
+const { category, Price, name, image, shortDescription } = item.attributes;
 const {
   data: {
     attributes: {
@@ -27,6 +27,8 @@ const {
     },
   },
 } = image;
+console.log("Price", Price);
+
   return (
     console.log('item', item),
     <Box width={width}>
@@ -36,8 +38,6 @@ const {
           width="300px"
           height="400px"
           src={`http://localhost:1337${url}`}
-
-          // src={`https://plus.unsplash.com/premium_photo-1661741379133-9206bca144dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3dlYXRlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1400&q=60`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: 'pointer'}}
           />
@@ -81,8 +81,9 @@ const {
             .replace(/[A-Z]/g, " $1")
             .replace(/^./, (str) => str.toUpperCase())}
         </Typography>
-        <Typography>{name}</Typography>
-        <Typography fontWeight="bold">${price}</Typography>
+        <Typography>{shortDescription}</Typography>
+        <Typography fontWeight="bold">${parseInt(Price, 10)}</Typography>
+
           </Box>
         </Box>
   )
