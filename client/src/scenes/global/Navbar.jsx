@@ -11,6 +11,7 @@ import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state";
 import React, { useState } from "react";
 import Menu from "./Menu"; 
+import { ReactComponent as SvgLogo } from "./SvgLogo.svg";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ function Navbar() {
       display="flex"
       alignItems="center"
       width="100%"
-      height="60px"
+      height="80px"
       color="black"
       position="fixed"
       top="0"
@@ -46,15 +47,20 @@ function Navbar() {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Box
-          onClick={() => navigate("/")}
-          sx={{
-            "&:hover": { cursor: "pointer" },
-            color: shades.orange[700],
-            fontSize: "27px" 
-          }}
-        >
-          Crochet? No Way!
+<Box
+  onClick={() => navigate("/")}
+  sx={{
+    "&:hover": { cursor: "pointer" },
+    color: shades.orange[700],
+    fontSize: "27px",
+    display: "flex",
+    alignItems: "center"
+  }}
+>
+  <SvgLogo
+    style={{ height: "75px", marginRight: "60px" }} // Adjust the height and spacing if needed
+  />
+
         </Box>
 
         <Box

@@ -29,7 +29,7 @@ const Footer = () => {
           color={shades.red[800]}
           >Crochet? No Way!</Typography>
           <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores temporibus consectetur, ea impedit exercitationem laborum odit harum, totam molestias, voluptate illo quod molestiae dolores. Eveniet voluptas blanditiis eum asperiores quasi!
+          Yes way! We're so excited to provide gorgeous handmade crochet items. The shop changes daily so stay tuned through our Instagram and newsletter. Commissions? Yes way! Reach out if there's another color or idea you'd like. All sales are final, thanks for shopping!
           </div>
         </Box>
         <Box>
@@ -56,7 +56,7 @@ const Footer = () => {
           <Typography 
           variant="h2"
           width="clamp(20%, 25%, 30%)">Our Credo:</Typography>
-          <Typography mb="40px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta modi iste, eaque accusantium, placeat nesciunt quos dolor eligendi accusamus illum vero quisquam fuga obcaecati, laboriosam aliquam tempora ratione nobis amet!</Typography>
+          <Typography mb="40px">Fun, function, and fab. We say yes way to intentional products.</Typography>
         </Box>
       </Box>
   </Box>
