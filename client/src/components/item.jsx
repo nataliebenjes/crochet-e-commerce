@@ -58,7 +58,7 @@ console.log("Price", Price);
               <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
                 <RemoveIcon />
               </IconButton>
-              <Typography color={shades.red[300]}>{count}</Typography>
+              <Typography>{count}</Typography>
               <IconButton onClick={() => setCount(count + 1)}>
                 <AddIcon />
               </IconButton>
@@ -69,7 +69,7 @@ console.log("Price", Price);
                 dispatch(addToCart({ item: { ...item, count } }));
               }}
               style={{
-                backgroundColor: orange.main,
+                backgroundColor: orange.dark,
                 color: orange.light,
                 transition: 'opacity 0.3s',
               }}

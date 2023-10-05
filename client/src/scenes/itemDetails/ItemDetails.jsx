@@ -76,7 +76,7 @@ console.log(item);
           </Box>
           {/* //top, right, bottom left */}
           <Box m="65px 0 25px 0">
-            <Typography variant="h3">{item?.attributes?.shortDescription}</Typography>
+            <Typography variant="h2">{item?.attributes?.shortDescription}</Typography>
             <Typography>${item?.attributes?.Price}</Typography>
             <Typography sx={{ mt: "20px" }}>{item?.attributes?.longDescription}</Typography>
           </Box>
@@ -99,7 +99,8 @@ console.log(item);
               </Box>
               <Button
               sx={{
-                backgroundColor: "pink"
+                backgroundColor: `${shades.teal[700]}`,
+                color: `${shades.red[100]}`
               }}
               onClick={() => dispatch(addToCart({ item: { ...item, count }}))}>Add to cart</Button>
           </Box>
@@ -125,7 +126,7 @@ console.log(item);
       )}
       {value === "reviews" && <div>reviews</div>}
     </Box>
-        <Typography variant="h3" fontWeight="bold">Related Products</Typography>
+        <Typography variant="h2" fontWeight="bold">Related Products</Typography>
         <Box
           mt="20px"
           display="flex"

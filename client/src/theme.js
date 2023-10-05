@@ -62,9 +62,9 @@ export const theme = createTheme({
       light: shades.teal[100]
     },
     orange: {
-      dark: shades.orange[700],
+      dark: shades.orange[600],
       main: shades.red[400],
-      light: shades.teal[300]
+      light: shades.red[100]
     },
     green: {
       main: shades.green[500]
