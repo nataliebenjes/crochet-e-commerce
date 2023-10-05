@@ -23,7 +23,7 @@ const Subscribe = () => {
       display="flex"
       alignItems="center"
       width="75%"
-      backgroundColor={shades.green[100]}
+      backgroundColor={shades.teal[100]}
 
       >
         <InputBase
