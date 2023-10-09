@@ -2,6 +2,8 @@
 
 Welcome to Crochet? No Way!, an e-commerce site for all your crochet needs.
 
+<img href="siteVideo.gif" alt="GIF of site">
+
 ## Technologies Used
 
 This project is built using the following technologies:
