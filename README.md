@@ -12,7 +12,7 @@ This project is built using the following technologies:
 - [Stripe](https://stripe.com/): A secure and developer-friendly way to accept payments online.
 - [Node.js](https://nodejs.org/): A JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [npm](https://www.npmjs.com/) / [Yarn](https://yarnpkg.com/): Package managers for installing JavaScript libraries and managing dependencies.
-
+-Adobe Illustrator and Adobe Fresco for custom logo design.
 Additional libraries and tools may be found in the project's dependencies listed in the `package.json` files for the server and client.
 
 
