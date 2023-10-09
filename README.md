@@ -2,7 +2,7 @@
 
 Welcome to Crochet? No Way!, an e-commerce site for all your crochet needs.
 
-<img href="siteVideo.gif" alt="GIF of site">
+![GIF of site](siteVideo.gif)
 
 ## Technologies Used
 
