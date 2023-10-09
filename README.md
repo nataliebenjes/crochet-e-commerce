@@ -1,10 +1,10 @@
-# Crochet-E-Commerce
+# 🧶🧶🧶🧶 Crochet-E-Commerce 🧶🧶🧶🧶
 
 Welcome to Crochet? No Way!, an e-commerce site for all your crochet needs.
 
 ![GIF of site](siteVideo.gif)
 
-## Technologies Used
+## 🧶 Technologies Used 🧶
 
 This project is built using the following technologies:
 
@@ -18,7 +18,7 @@ This project is built using the following technologies:
 Additional libraries and tools may be found in the project's dependencies listed in the `package.json` files for the server and client.
 
 
-## Getting Started
+## 🧶 Getting Started 🧶
 
 To run the app, follow these steps:
 1. Obtain a secret key from [Stripe](https://stripe.com/).
@@ -35,7 +35,7 @@ To run the app, follow these steps:
 `npm run start`
 
 
-## Features
+## 🧶 Features 🧶
 
 - Home page carousel
 - Display products using a Strapi backend
@@ -46,7 +46,7 @@ To run the app, follow these steps:
 Please note that the website is not currently connected to a bank account and does not list real products.
 
 
-### Stripe Checkout
+### 🧶 Stripe Checkout 🧶
 
 For Stripe integration, refer to the [Stripe Checkout Quickstart](https://stripe.com/docs/checkout/quickstart) guide. 
 
@@ -56,14 +56,8 @@ You can use the following test cards for simulation:
 - Payment requires authentication: `4000 0025 0000 3155`
 - Payment is declined: `4000 0000 0000 9995`
 
-## Development Mode
 
-To run in development mode, use the following command:
-
-
-## Strapi Usage
-
-### Endpoints
+### 🧶 Endpoints 🧶
 
 - `GET /api/:pluralApiId`: Get a list of entries
 - `POST /api/:pluralApiId`: Create an entry
@@ -71,34 +65,9 @@ To run in development mode, use the following command:
 - `PUT /api/:pluralApiId/:documentId`: Update an entry
 - `DELETE /api/:pluralApiId/:documentId`: Delete an entry
 
-### Commands
-
-- `npm run develop`: Start Strapi with autoReload enabled
-- `npm run start`: Start Strapi with autoReload disabled
-- `npm run build`: Build your admin panel
-
-## Deployment
-
-Explore deployment options for your project, including [Strapi Cloud](https://cloud.strapi.io). Refer to the [deployment documentation](https://docs.strapi.io/dev-docs/deployment) for more details.
-
-## Learn More
-
-- [Resource Center](https://strapi.io/resource-center)
-- [Strapi Documentation](https://docs.strapi.io)
-- [Strapi Tutorials](https://strapi.io/tutorials)
-- [Strapi Blog](https://strapi.io/blog)
-- [Changelog](https://strapi.io/changelog)
-
-For contributions, visit the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## Community
-
-- [Discord](https://discord.strapi.io)
-- [Forum](https://forum.strapi.io/)
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi)
 
 
-## Known Bugs
+## 🧶 Known Bugs 🧶
 ### Preventing Duplicate Items
 
 To prevent adding duplicate items to the cart, a feature is implemented.
