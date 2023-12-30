@@ -42,15 +42,22 @@ const ShoppingList = () => {
     getItems();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 console.log(items);
-  const hatsItems = items.filter(
+let hatsItems = {};
+let topsItems = {};
+
+let miscellaneousItems  = {};
+if (items !== null) {
+  hatsItems = items.filter(
     (item) => item.attributes.category === "hats"
   );
-  const topsItems = items.filter(
+  topsItems = items.filter(
     (item) => item.attributes.category === "tops"
   );
-  const miscellaneousItems = items.filter(
+  miscellaneousItems = items.filter(
     (item) => item.attributes.category === "miscellaneous"
   );
+}
+
 
   return (
     <Box width="80%" margin="80px auto">
@@ -88,6 +95,7 @@ console.log(items);
         rowGap="20px"
         columnGap="1.33%"
       >
+
         {value === "all" &&
           items.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
@@ -104,6 +112,7 @@ console.log(items);
           hatsItems.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
           ))}
+          
       </Box>
     </Box>
   );
