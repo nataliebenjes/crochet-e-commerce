@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useDispatch, useSelector } from "react-redux";
 
-import { setItems } from "../../state";
+import { setItems } from "../../state/index";
 
 const ShoppingList = () => {
   const dispatch = useDispatch();
@@ -42,10 +42,9 @@ const ShoppingList = () => {
     getItems();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 console.log(items);
-let hatsItems = {};
-let topsItems = {};
-
-let miscellaneousItems  = {};
+let hatsItems = [];
+let topsItems = [];
+let miscellaneousItems  = [];
 if (items !== null) {
   hatsItems = items.filter(
     (item) => item.attributes.category === "hats"
@@ -95,12 +94,17 @@ if (items !== null) {
         rowGap="20px"
         columnGap="1.33%"
       >
-
+      {value === "all" && items !== null ?
+      items.map((item) => (
+        <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
+      )) :
+      <p>Loading...</p> // or any other loading indication
+        }
         {value === "all" &&
           items.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
           ))}
-        {value === "tops" &&
+          {value === "tops" &&
           topsItems.map((item) => (
             <Item item={item} key={`${item.name}-${item.id}`} width={undefined} />
           ))}
