@@ -65,7 +65,8 @@ You can use the following test cards for simulation:
 - `PUT /api/:pluralApiId/:documentId`: Update an entry
 - `DELETE /api/:pluralApiId/:documentId`: Delete an entry
 
-
+## 🧶 Improvements to be made 🧶
+-Add .env setup instructions to readme
 
 ## 🧶 Known Bugs 🧶
 ### Preventing Duplicate Items
