@@ -4,7 +4,7 @@ import { IconButton, Box, Typography, useTheme, Button, Tabs, Tab } from "@mui/m
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import { shades } from "../../theme.js";
-import { addToCart } from "../../state";
+import { addToCart } from "../../state.js";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
